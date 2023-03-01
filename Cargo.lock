@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "lgr_cli"
+name = "my-jira"
 version = "0.1.0"
