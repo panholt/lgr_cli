@@ -1,24 +1,42 @@
 pub enum Status {
-    // TODO: add fields (make sure the fields are public)
+    Open,
+    InProgress,
+    Resolved,
+    Closed,
 }
 
 pub struct Epic {
-    // TODO: add fields (make sure the fields are public)
+    pub id: u32,
+    pub name: String,
+    pub description: String,
+    pub status: Status,
+    pub stories: Vec<u32>,
 }
 
 impl Epic {
     pub fn new(name: String, description: String) -> Self {
-        todo!() // by default the status should be set to open and the stories should be an empty vector
+        Self { id: 1,
+               name: name,
+               description: description,
+               status: Status::Open,
+               stories:  Vec::new(),
+        }
     }
 }
 
 pub struct Story {
-    // TODO: add fields (make sure the fields are public)
+    pub id: u32,
+    pub name: String,
+    pub description: String, 
+    pub status: Status,
 }
 
 impl Story {
     pub fn new(name: String, description: String) -> Self {
-        todo!() // by default the status should be set to open
+        Self { id: 1, 
+               name: name,
+               description: description, 
+               status: Status::Open }
     }
 }
 
